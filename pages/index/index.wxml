@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<navigation-bar title="幸运随机数" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<scroll-view class="scrollarea" scroll-y type="list">
+<view class="container">
+    
+    <view class="input-group">
+  <text>最小值:</text>
+  <input class="input" type="number" placeholder="输入最小值"/>
+</view>
+<view class="input-group">
+    <text>最大值:</text>
+    <input class="input" type="number" placeholder="输入最大值"/>
+</view>
+
+<button bindtap="generateRandom">生成随机数</button>
+    <view class="result" wx:if="{{randomNumber !== ''}}">
+      <text>{{randomNumber}}</text>
+    </view>
+  </view>
+</scroll-view>
